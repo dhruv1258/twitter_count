@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Post Counter with Topics</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Twitter Post Counter</h1>
+            <p class="subtitle">Track your daily posting progress by topic</p>
+        </header>
+
+        <div class="main-layout">
+            <main class="main-content">
+                <div class="stats-card">
+                    <div class="count-display">
+                        <span class="count-number" id="postCount">0</span>
+                        <span class="count-label">Posts Today</span>
+                    </div>
+                    
+                    <div class="total-display">
+                        <span class="total-number" id="totalCount">0</span>
+                        <span class="total-label">Total Posts</span>
+                    </div>
+                </div>
+
+                <div class="add-post-form">
+                    <h2>Add New Post</h2>
+                    <div class="form-group">
+                        <input type="text" id="topicInput" placeholder="Enter topic/tag (e.g., Web3, idOS, Kite AI)" class="topic-input">
+                        <button class="btn btn-primary" id="addPost">
+                            <span class="btn-icon">+</span> Add Post
+                        </button>
+                    </div>
+                    <div class="quick-topics" id="quickTopics"></div>
+                </div>
+
+                <div class="topic-stats-section">
+                    <h2>Posts by Topic</h2>
+                    <div id="topicStats" class="topic-stats-grid"></div>
+                </div>
+
+                <div class="controls">
+                    <button class="btn btn-reset" id="resetDay">Reset Today</button>
+                    <button class="btn btn-danger" id="resetAll">Reset All Data</button>
+                </div>
+            </main>
+
+            <aside class="sidebar-right">
+                <div class="history-section">
+                    <h2>Recent Posts</h2>
+                    <div id="postsList" class="posts-list"></div>
+                </div>
+            </aside>
+        </div>
+
+        <footer>
+            <p>Data saved locally in your browser</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
